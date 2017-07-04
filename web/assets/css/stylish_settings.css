@@ -4,7 +4,7 @@
 }
 
 .mb30 {
-    margin-bottom: : 30px;
+    margin-bottom: 30px;
 }
 
 .asterisk {
@@ -507,7 +507,7 @@ a.fs-product-modal-link-to-detail{
     font-size: 14px;
 }
 
-.btn-custom, .btn-custom: hover, .btn-custom: active, .btn-custom: focus {
+.btn-custom, .btn-custom:hover, .btn-custom:active, .btn-custom:focus {
     background-color: #ff8627;
     color: #ffffff;
     padding-bottom: 10px;
