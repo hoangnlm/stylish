@@ -66,7 +66,7 @@
                     </ul>
                 </div>
             </aside>
-            <div class="col-md-9 col-sm-8 blog-content">
+                        <div class="col-md-9 col-sm-8 blog-content bgwhite" style="padding-top: 20px;">
                 <c:forEach items="${getBlogsListByCate}" var="blogclient" begin="0" end="10" varStatus="no">
                     <div class="col-md-12 col-sm-8 blog-content" >
                         <article class="blogpost">

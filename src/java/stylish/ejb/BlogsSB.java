@@ -50,7 +50,7 @@ public class BlogsSB implements BlogsSBLocal {
 
     @Override
     public List<Blogs> getListBlogsByCategory(int blogCateID) {
-        Query q = em.createQuery("SELECT b FROM Blogs b WHERE b.blogCategory.blogCateID = :blogCateID", Blogs.class);
+        Query q = em.createQuery("SELECT b FROM Blogs b WHERE b.status = 0 AND b.blogCategory.blogCateID = :blogCateID", Blogs.class);
         q.setParameter("blogCateID", blogCateID);
         return q.getResultList();
     }

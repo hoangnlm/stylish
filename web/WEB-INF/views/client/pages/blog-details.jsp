@@ -71,7 +71,7 @@
                     </ul>
                 </div>-->
             </aside>
-            <div class="col-md-9 col-sm-8 blog-content">
+            <div class="col-md-9 col-sm-8 blog-content bgwhite" style="padding-top: 20px;">
                 <div class="blog-single">
                     <article class="blogpost">
                         <h2 class="post-title">${getShowAllBlogsDetail.blogTitle}</h2>

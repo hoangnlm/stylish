@@ -55,7 +55,7 @@
                     </ul>
                 </div>
             </aside>
-            <div class="col-md-9 col-sm-8 blog-content">
+            <div class="col-md-9 col-sm-8 blog-content bgwhite">
 <!--                <div class="blog-content-list" style="display: flex;">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
