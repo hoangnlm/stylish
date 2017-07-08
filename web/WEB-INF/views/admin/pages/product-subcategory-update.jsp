@@ -41,7 +41,7 @@
 
                         <button type="submit" class="btn btn-warning" id="fs-btn-update-sub-category">Update</button>
                         <button type="reset" class="btn btn-default">Reset</button>
-                        <button type="button" onclick="window.location = 'admin/user/product-subcategory.html';" class="btn btn-default">BACK TO LIST</button>
+                        <button type="button" onclick="window.location = 'admin/product-subcategory.html';" class="btn btn-default">BACK TO LIST</button>
                     </form:form>
                 </div>
             </div>
