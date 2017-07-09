@@ -19,6 +19,7 @@
             <div class="col-lg-12">
                 <div class="col-lg-6">
                     <form:form name="cateupdateForm" action="" method="POST" modelAttribute="targetBlogCategories">
+                        ${error}
                         <div class="form-group">
                             <label>Category</label>
                             <p class="help-block" id="fs-blog-category-error"></p>                      

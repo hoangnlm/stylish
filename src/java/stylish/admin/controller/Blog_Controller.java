@@ -77,16 +77,18 @@ public class Blog_Controller {
         newBlogCate.setBlogCateNameNA(shareFunc.changeText(newBlogCate.getBlogCateName()));
         int checkError = categoriesSB.addNewBlogCategories(newBlogCate);
         if (checkError == 2) {
-            model.addAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Blog Category Name existed!.</div>");
-            model.addAttribute("categories", newBlogCate);
-            return "admin/pages/blog-category-add";
+            redirectAttr.addFlashAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Blog Category Name existed!.</div>");
+//            model.addAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Blog Category Name existed!.</div>");
+//            model.addAttribute("categories", newBlogCate);
+//            return "admin/pages/blog-category-add";
         } else if (checkError == 0) {
             redirectAttr.addFlashAttribute("error", "<div class=\"col-md-12  alert alert-success\">Create New Categories Successfully!</div>");
-            return "redirect:/admin/blog/category/create.html";
+//            return "redirect:/admin/blog/category/create.html";
         } else {
             redirectAttr.addFlashAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Create New Categories FAILED!. Error was happened!</div>");
-            return "redirect:/admin/blog/category/create.html";
+//            return "redirect:/admin/blog/category/create.html";
         }
+        return "redirect:/admin/blog/category/create.html";
     }
 
     @RequestMapping(value = "category/edit/{blogCateID}", method = RequestMethod.GET)
@@ -101,7 +103,10 @@ public class Blog_Controller {
             RedirectAttributes redirectAttr,
             @PathVariable("blogCateID") Integer blogCateID) {
         targetBlogCategories.setBlogCateNameNA(shareFunc.changeText(targetBlogCategories.getBlogCateName()));
-        if (blogCategoriesSB.updateCategories(targetBlogCategories)) {
+        int checkError = categoriesSB.updateCategories(targetBlogCategories);
+        if (checkError == 2) {
+            redirectAttr.addFlashAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Blog Category Name existed!.</div>");
+        } else if (checkError == 0) {
             redirectAttr.addFlashAttribute("status", "<div class=\"col-md-12  alert alert-success\">Update Category Successfully!</div>");
         } else {
             redirectAttr.addFlashAttribute("status", "<div class=\"col-md-12  alert alert-success\">Error was happened!</div>");

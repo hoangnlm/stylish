@@ -11,7 +11,7 @@ public interface BlogCategoriesSBLocal {
 
     int addNewBlogCategories(BlogCategories newBlogCate);
 
-    boolean updateCategories(BlogCategories cate);
+    int updateCategories(BlogCategories cate);
 
     int findCategoriesByName(String blogCateName);
 

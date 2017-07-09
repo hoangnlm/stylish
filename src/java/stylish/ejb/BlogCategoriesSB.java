@@ -45,13 +45,19 @@ public class BlogCategoriesSB implements BlogCategoriesSBLocal {
     }
 
     @Override
-    public boolean updateCategories(BlogCategories cate) {
-        try {
-            em.merge(cate);
-            return true; //Update thành công
-        } catch (Exception e) {
-            return false;  //Lỗi đã xảy ra
+    public int updateCategories(BlogCategories cate) {
+        int errorCode;
+        if (findCategoriesByName(cate.getBlogCateName()) == 1) {
+            errorCode = 2; //Category Đã tồn tại
+        } else {
+            try {
+                em.merge(cate);
+                errorCode = 0;  //add mới thành công
+            } catch (Exception e) {
+                errorCode = 1;  //Lỗi đã xảy ra.
+            }
         }
+        return errorCode;
     }
 
     // Add business logic below. (Right-click in editor and choose
