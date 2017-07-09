@@ -932,7 +932,7 @@ $(document).ready(function () {
     /* SLIDE PRODUCTS IN INDEX */
     $("#isotope").isotope({
         filter: '.isotope_to_all',
-        sortBy: 'random'
+        sortBy: 'number'
     });
     /* INDEX - CHANGE IMG WHEN CHOOSE COLOR */
     $("body").on("click", ".fs-index-color-img", function () {
