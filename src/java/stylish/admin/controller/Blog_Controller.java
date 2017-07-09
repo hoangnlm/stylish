@@ -78,15 +78,10 @@ public class Blog_Controller {
         int checkError = categoriesSB.addNewBlogCategories(newBlogCate);
         if (checkError == 2) {
             redirectAttr.addFlashAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Blog Category Name existed!.</div>");
-//            model.addAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Blog Category Name existed!.</div>");
-//            model.addAttribute("categories", newBlogCate);
-//            return "admin/pages/blog-category-add";
         } else if (checkError == 0) {
             redirectAttr.addFlashAttribute("error", "<div class=\"col-md-12  alert alert-success\">Create New Categories Successfully!</div>");
-//            return "redirect:/admin/blog/category/create.html";
         } else {
             redirectAttr.addFlashAttribute("error", "<div class=\"col-md-12  alert alert-danger\">Create New Categories FAILED!. Error was happened!</div>");
-//            return "redirect:/admin/blog/category/create.html";
         }
         return "redirect:/admin/blog/category/create.html";
     }
