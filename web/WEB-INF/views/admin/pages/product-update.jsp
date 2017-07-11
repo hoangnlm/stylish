@@ -121,7 +121,7 @@
 
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="display: none;">
                             <label class="control-label col-sm-3">Discount</label>
                             <div class="col-sm-9">
                                 <div class="input-group">

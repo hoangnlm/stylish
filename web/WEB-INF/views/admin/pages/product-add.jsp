@@ -71,7 +71,7 @@
                                 </span>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" style="display: none;">
                                 <label>Discount</label>
                                 <p class="help-block" id="fs-product-discount-error"></p>
                                 <span class="input-group">

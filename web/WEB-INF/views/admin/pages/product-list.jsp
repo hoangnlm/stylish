@@ -83,7 +83,7 @@
                                 </td>
 
                                 <td class="text-center fs-valign-middle">
-                                    <a href="${product.productID}-${product.productColorList[0].colorID}-${product.productNameNA}.html" class="btn btn-info" style="margin-top: 4px;">
+                                    <a href="${product.productID}-${product.productColorList[0].colorID}-${product.productNameNA}.html" class="btn btn-info" style="margin-top: 4px;" target="_blank">
                                         <i class="fa fa-info-circle" aria-hidden="true"></i> Detail
                                     </a>
                                     <a href="admin/product/edit-${product.productID}.html" class="btn btn-warning" style="margin-top: 4px;">

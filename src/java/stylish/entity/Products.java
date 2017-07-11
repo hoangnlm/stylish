@@ -32,7 +32,7 @@ public class Products implements Serializable {
     private Float price;
     private String urlImg;
     private String productDescription;
-    private Short productDiscount;
+    private Short productDiscount = 0;
     @Temporal(TemporalType.DATE)
     private Date postedDate;
     private Integer productViews;

@@ -169,7 +169,6 @@ public class Product_Controller {
      *                       SUB-CATEGORY TREATMENT                          *
      *                                                                       *
      ========================================================================*/
-
     @RequestMapping(value = "product-subcategory")
     public String productSubCateList(ModelMap model) {
         model.addAttribute("subCateList", productStateLessBean.subCategoryList());
@@ -312,7 +311,6 @@ public class Product_Controller {
      *                          PRODUCT TREATMENT                            *
      *                                                                       *
      ========================================================================*/
-
     @RequestMapping(value = "product")
     public String productList(ModelMap model) {
         model.addAttribute("productList", productStateLessBean.productList("admin"));
@@ -341,7 +339,8 @@ public class Product_Controller {
         int subCateID = Integer.parseInt(allRequestParams.get("subCategory").get(0));
 
         Float price = Float.parseFloat(allRequestParams.get("price").get(0));
-        Short discount = Short.parseShort(allRequestParams.get("discount").get(0));
+//        Short discount = Short.parseShort(allRequestParams.get("discount").get(0));
+        Short discount = 0;
         String description = allRequestParams.get("description").get(0);
         List<String> colorList = allRequestParams.get("color");
         List<MultipartFile> colorImgs = ((DefaultMultipartHttpServletRequest) request).getFiles("colorImg[]");
@@ -552,7 +551,7 @@ public class Product_Controller {
             @RequestParam("subCategory") Integer subCategoryID,
             @RequestParam("productName") String productName,
             @RequestParam("price") Float price,
-            @RequestParam("discount") Short discount,
+//            @RequestParam("discount") Short discount,
             @RequestParam("urlImg") MultipartFile urlImg,
             @RequestParam("description") String description,
             RedirectAttributes flashAttr
@@ -566,7 +565,7 @@ public class Product_Controller {
             targetProduct.setProductName(productName);
             targetProduct.setProductNameNA(shareFunc.changeText(productName));
             targetProduct.setPrice(price);
-            targetProduct.setProductDiscount(discount);
+//            targetProduct.setProductDiscount(discount);
             targetProduct.setProductDescription(description);
 
             if (!urlImg.isEmpty()) {
@@ -1402,7 +1401,6 @@ public class Product_Controller {
      *                              MISCELLANEOUS                            *
      *                                                                       *
      ========================================================================*/
-
 //    @ResponseBody
 //    @RequestMapping(value = "ajax/getReturningVisitorData", method = RequestMethod.POST)
 //    public String getReturningVisitorData() {
